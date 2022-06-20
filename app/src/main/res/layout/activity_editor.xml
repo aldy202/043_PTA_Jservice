@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Nama Pemilik"
+            android:inputType="textCapSentences"
+            android:textSize="25sp" />
+
+
+        <EditText
+            android:id="@+id/jenis"
+            android:hint="Jenis Barang"
+            android:textSize="25sp"
+            android:gravity="top|start"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/nama"
+            android:inputType="textCapSentences"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/detail"
+            android:layout_below="@+id/jenis"
+            android:gravity="top|start"
+            android:layout_marginTop="20dp"
+            android:hint="Detail Kerusakan"
+            android:inputType="textMultiLine"
+            android:minLines="7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/metode"
+            android:hint="Antar sendiri/diambil teknisi"
+            android:textSize="25sp"
+            android:gravity="top|start"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/detail"
+            android:inputType="textCapSentences"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/status"
+            android:hint="Status Barang"
+            android:textSize="25sp"
+            android:gravity="top|start"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/metode"
+            android:inputType="textCapSentences"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/status"
+            android:layout_marginTop="45dp">
+            <Button
+                android:id="@+id/save"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/status"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/colorPrimary2"
+                android:text="SAVE"
+                android:layout_marginTop="8dp" />
+            <Button
+                android:id="@+id/delete"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/status"
+                android:backgroundTint="@color/colorPrimary2"
+                android:text="DELETE"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
